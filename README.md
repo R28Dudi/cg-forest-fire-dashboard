@@ -3,7 +3,7 @@
 Interactive dashboard of NASA VIIRS satellite fire detections over Chhattisgarh (2012-2025), with a year-ahead
 fire-risk forecast, a next-month risk model and district-level monthly forecasts.
 
-**Live app:** _add your Streamlit link here_
+**Live app:** https://cg-forest-fire-risk.streamlit.app/
 
 ## What it does
 - **Observed map:** real detections only, for any year and month, as grid cells, individual points or districts.
@@ -43,16 +43,7 @@ streamlit run app.py
 The app offers three data sources in the sidebar: the bundled dataset (if `data/` exists), your own FIRMS CSV files,
 or synthetic demo data.
 
-## Build the bundled dataset
-Download yearly VIIRS CSVs from NASA FIRMS (whole-India files are fine), then:
-```bash
-python prepare_data.py --csv-dir "path/to/csv/folder" --boundary "path/to/Chhattisgarh.geojson"
-```
-This writes `data/cg_fires.csv.gz` and `data/Chhattisgarh.geojson`. Commit both to the repository.
 
-## Deploy (Streamlit Community Cloud)
-1. Push this folder (including `data/`) to a GitHub repository.
-2. At share.streamlit.io choose "New app", select the repository, branch `main`, main file `app.py`, then deploy.
 
 ## Limitations
 - Satellite hotspots are not confirmed forest fires; crop burning is included.
@@ -61,4 +52,4 @@ This writes `data/cg_fires.csv.gz` and `data/Chhattisgarh.geojson`. Commit both 
 
 ## Data and attribution
 Fire detections: NASA FIRMS (Fire Information for Resource Management System), VIIRS S-NPP active-fire product.
-Check the licence of your district boundary file before publishing it.
+
